@@ -22,7 +22,7 @@ def main():
         wait(2)
         print("And there are 5 blanks")
         wait(2)
-        print("You gonna die if in chamber there's the bullet")
+        print("You're gonna die if in chamber there's the bullet")
         wait(2)
         print("How long do you want to spin? (1-10)")
         amount = int(input("> "))
