@@ -3,6 +3,8 @@ import sys
 import random
 import time
 
+os.system('title Russian Roulette')
+
 def clr():
     os.system('cls' if os.name=='nt' else 'clear')
     
