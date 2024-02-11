@@ -14,6 +14,7 @@ def main():
     print("Do you want to play russian roulette?: Y/N")
     anwser = str(input("> "))
     if anwser.lower() == "y":
+        clr()
         dead = random.randint(1, 6)
         print("The rules are simple.")
         wait(2)
