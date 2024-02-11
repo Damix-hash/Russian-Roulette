@@ -24,8 +24,6 @@ def spin():
             print("Please pick a smaller number (1-10).")
         amount = int(input("> "))
         clr()
-
-    print(amount)
     print("Spinning.")
     for i in range(amount):
         chamber = random.randint(1, 6)
@@ -46,7 +44,6 @@ def main():
         print("You're gonna die if in chamber there's the bullet")
         wait(2)
         print("How long do you want to spin? (1-10)")
-                
         spin()
         clr()
         print("Do You Want To Shoot?")
