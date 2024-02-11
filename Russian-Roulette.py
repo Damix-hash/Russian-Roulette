@@ -31,7 +31,7 @@ def main():
         clr()
         print("Spinning.")
         if amount < 11:
-            for i in range(0, amount):
+            for i in range(1, amount):
                 chamber = random.randint(1, 6)
             clr()
             print("Do You Want To Shoot?")
