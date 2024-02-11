@@ -3,8 +3,8 @@ import sys
 import random
 import time
 
-def wait(time):
-    time.sleep(time)
+def wait(i):
+    time.sleep(int(i))
     
 dead = random.randint(1, 6)
 
@@ -26,7 +26,7 @@ if anwser.lower() == "y":
     amount = int(input("> "))
     print("Spinning.")
     if amount < 11:
-        for i in range(0, amount):
+        for spin in range(0, amount):
             chamber = random.randint(1, 6)
         print("Do You Want To Shoot?")
         wait(1)
