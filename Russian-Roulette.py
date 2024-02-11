@@ -54,8 +54,9 @@ def main():
             else:
                 print("That Was A Blank.")
 
+main()
 print("Wanna Play Again? Y/N")
-anwser_again = str(input("> ")
+anwser_again = str(input("> "))
 if anwser_again.lower() == "y":
     clr()
     main()
