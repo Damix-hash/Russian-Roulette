@@ -7,9 +7,27 @@ def clr():
     os.system('cls' if os.name=='nt' else 'clear')
     
 def wait(i):
-    i = int(i)
     time.sleep(i)
     
+def spin():
+    global chamber
+    amount = int(input("> "))
+    clr()
+    while amount < 1 or amount > 10:
+        if amount == 0:
+            print("Please pick a larger number (1-10).")
+        elif amount < 0:
+            print("Please pick a positive number (1-10).")
+        elif amount > 10:
+            print("Please pick a smaller number (1-10).")
+        amount = int(input("> "))
+        clr()
+
+    print(amount)
+    print("Spinning.")
+    for i in range(amount):
+        chamber = random.randint(1, 6)
+        
 print("Do you want to play russian roulette?: Y/N")
 anwser = str(input("> "))
     
@@ -26,19 +44,15 @@ def main():
         print("You're gonna die if in chamber there's the bullet")
         wait(2)
         print("How long do you want to spin? (1-10)")
-        amount = int(input("> "))
+                
+        spin()
         clr()
-        print("Spinning.")
-        if amount < 11:
-            for i in range(1, amount):
-                chamber = random.randint(1, 6)
-            clr()
-            print("Do You Want To Shoot?")
-            wait(2)
-            print("Y - Shoot")
-            print("N - Skip")
-            shoot_anwser = str(input("> "))
-            clr()
+        print("Do You Want To Shoot?")
+        wait(2)
+        print("Y - Shoot")
+        print("N - Skip")
+        shoot_anwser = str(input("> "))
+        clr()
 
         if shoot_anwser.lower() == "n":
             if chamber == dead:
