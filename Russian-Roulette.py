@@ -49,6 +49,7 @@ def main():
         elif shoot_anwser.lower() == "y":
             if chamber == dead:
                 print("You've died!. Removing python file")
+                wait(5)
                 file_name =  os.path.basename(sys.argv[0])
                 os.remove(file_name)
             else:
