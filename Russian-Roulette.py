@@ -9,11 +9,10 @@ def clr():
 def wait(i):
     i = int(i)
     time.sleep(i)
-    
-print("Do you want to play russian roulette?: Y/N")
-anwser = str(input("> "))
 
 def main():
+    print("Do you want to play russian roulette?: Y/N")
+    anwser = str(input("> "))
     if anwser.lower() == "y":
         dead = random.randint(1, 6)
         print("The rules are simple.")
@@ -55,10 +54,10 @@ def main():
             else:
                 print("That Was A Blank.")
 
-    print("Wanna Play Again? Y/N")
-    anwser_again = str(input("> "))
-    if anwser_again.lower() == "y":
-        clr()
-        main()
+        print("Wanna Play Again? Y/N")
+        anwser_again = str(input("> "))
+        if anwser_again.lower() == "y":
+            clr()
+            main()
 
 main()
