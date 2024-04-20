@@ -5,4 +5,6 @@ Russian Roulette made in PYTHON
 It's just a russian roulette game but if you'll die the file gets removed from your computer
 
 # Requirements
-none
+```
+pip install -r requirements.txt
+```
